@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@v16/font/simple-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Currículo - Lucas Cavalheri</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
@@ -133,9 +144,13 @@
         padding: 10px 15px;
         border-radius: 8px;
         font-size: 14px;
-        text-align: center;
         border: 1px solid #e2e8f0;
         transition: all 0.3s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
       }
 
       .skill-item:hover {
@@ -291,13 +306,34 @@
         <div class="section">
           <h2 class="section-title">Competências Técnicas</h2>
           <div class="skills-grid">
-            <div class="skill-item">PHP</div>
-            <div class="skill-item">JavaScript</div>
-            <div class="skill-item">TypeScript</div>
-            <div class="skill-item">Laravel</div>
-            <div class="skill-item">Vue.js</div>
-            <div class="skill-item">Node.js</div>
-            <div class="skill-item">HubSpot</div>
+            <div class="skill-item">
+              <i class="si si-php"></i>
+              PHP
+            </div>
+            <div class="skill-item">
+              <i class="si si-javascript"></i>
+              JavaScript
+            </div>
+            <div class="skill-item">
+              <i class="si si-typescript"></i>
+              TypeScript
+            </div>
+            <div class="skill-item">
+              <i class="si si-laravel"></i>
+              Laravel
+            </div>
+            <div class="skill-item">
+              <i class="si si-vuedotjs"></i>
+              Vue.js
+            </div>
+            <div class="skill-item">
+              <i class="si si-nodedotjs"></i>
+              Node.js
+            </div>
+            <div class="skill-item">
+              <i class="si si-hubspot"></i>
+              HubSpot
+            </div>
           </div>
         </div>
 
@@ -305,32 +341,44 @@
           <h2 class="section-title">Links Profissionais</h2>
           <div class="links-grid">
             <a
+              href="https://www.lucascavalheri.com.br/"
+              class="link-item"
+              target="_blank"
+            >
+              <span>
+                <i class="fa-solid fa-globe"></i>
+                Portfolio: lucascavalheri.com.br
+              </span>
+            </a>
+            <a
               href="https://github.com/LucasCavalheri"
               class="link-item"
               target="_blank"
             >
-              <span>GitHub: /LucasCavalheri</span>
+              <span>
+                <i class="si si-github"></i>
+                GitHub: /LucasCavalheri
+              </span>
             </a>
             <a
               href="https://www.youtube.com/@CavalheriDev"
               class="link-item"
               target="_blank"
             >
-              <span>YouTube: Cavalheri Dev</span>
+              <span>
+                <i class="si si-youtube"></i>
+                YouTube: Cavalheri Dev
+              </span>
             </a>
             <a
               href="https://www.linkedin.com/in/lucas-cavalheri/"
               class="link-item"
               target="_blank"
             >
-              <span>LinkedIn: /lucas-cavalheri</span>
-            </a>
-            <a
-              href="https://www.lucascavalheri.com.br/"
-              class="link-item"
-              target="_blank"
-            >
-              <span>Portfolio: lucascavalheri.com.br</span>
+              <span>
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn: /lucas-cavalheri
+              </span>
             </a>
           </div>
         </div>
