@@ -5,1484 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Lucas Cavalheri — Desenvolvedor Web Full-Stack: PHP, Laravel e Inertia.js; JavaScript, TypeScript, Node.js, React.js e Vue.js; Python, Flask e FastAPI; Java e Spring Boot."
-    />
-    <meta
-      name="keywords"
-      content="Desenvolvedor Web, Full-Stack Developer, PHP Developer, Laravel Developer, Inertia.js, JavaScript Developer, TypeScript, React.js, Vue.js, Node.js, Python, Flask, FastAPI, Java, Spring Boot, Backend Developer, Frontend Developer, Web Developer Brazil, Desenvolvedor PHP, Desenvolvedor Laravel, Software Engineer, Clean Code, API REST, MVC"
+      content="Curriculo de Lucas Cavalheri, Desenvolvedor Web Full-Stack."
     />
     <meta name="author" content="Lucas Cavalheri" />
     <title>Curriculo - Lucas Cavalheri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["'DM Sans'", "sans-serif"],
-              mono: ["'JetBrains Mono'", "monospace"],
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <style>
-      *,
-      *::before,
-      *::after {
+      * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
       }
+
       body {
-        font-family: "DM Sans", sans-serif;
-        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #111;
+        background: #fff;
       }
 
-      /* ─── ATS hidden ─── */
-      .ats-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
+      .page {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 32px 28px 40px;
+      }
+
+      h1 {
+        margin: 0 0 4px;
+        font-size: 30px;
+      }
+
+      .subtitle {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .contact {
+        margin: 0;
+      }
+
+      .contact a {
+        color: #111;
+        text-decoration: none;
+      }
+
+      section {
+        margin-top: 22px;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        border-bottom: 1px solid #111;
+        padding-bottom: 4px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .job {
+        margin-top: 14px;
+      }
+
+      .job:first-of-type {
+        margin-top: 0;
+      }
+
+      .job-header {
+        margin: 0;
+      }
+
+      .job-period {
+        margin: 2px 0 6px;
+        font-style: italic;
+      }
+
+      ul {
+        margin: 6px 0 0 18px;
         padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-        opacity: 0;
-        font-size: 0;
       }
 
-      /* ─── Tokens ─── */
-      .sec-label {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #10b981;
-      }
-      .mono {
-        font-family: "JetBrains Mono", monospace;
+      li {
+        margin: 2px 0;
       }
 
-      .badge {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11.5px;
-        font-weight: 500;
-        padding: 4px 10px;
-        border-radius: 6px;
-        border: 1.5px solid #6ee7b7;
-        background: #f0fdf4;
-        color: #065f46;
-        white-space: nowrap;
-        display: inline-block;
-        line-height: 1.4;
+      .no-print {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1000;
       }
 
-      .pill-active {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px;
-        font-weight: 500;
-        padding: 3px 10px;
-        border-radius: 999px;
-        background: #f0fdf4;
-        border: 1.5px solid #6ee7b7;
-        color: #065f46;
+      .print-btn {
+        border: 1px solid #111;
+        background: #fff;
+        color: #111;
+        padding: 10px 14px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
       }
 
-      .pulse {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #10b981;
-        flex-shrink: 0;
-        animation: pulse-anim 1.8s ease-in-out infinite;
-      }
-      @keyframes pulse-anim {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.5;
-          transform: scale(0.8);
-        }
-      }
-
-      /* ─── Timeline ─── */
-      .tl-wrap {
-        position: relative;
-        padding-left: 32px;
-      }
-
-      .tl-line {
-        position: absolute;
-        left: 7px;
-        top: 12px;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, #10b981 60%, #d1fae5);
-        border-radius: 999px;
-      }
-
-      .tl-item {
-        position: relative;
-        margin-bottom: 30px;
-      }
-      .tl-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .tl-dot {
-        position: absolute;
-        left: -30px;
-        top: 6px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: #10b981;
-        border: 3px solid white;
-        box-shadow: 0 0 0 2px #10b981;
-      }
-      .tl-dot.live {
-        animation: glow 2s ease-in-out infinite;
-      }
-      @keyframes glow {
-        0%,
-        100% {
-          box-shadow: 0 0 0 2px #10b981;
-        }
-        50% {
-          box-shadow:
-            0 0 0 2px #10b981,
-            0 0 14px #6ee7b7;
-        }
-      }
-
-      /* ─── Skill bar ─── */
-      .bar {
-        height: 4px;
-        border-radius: 999px;
-        background: #d1fae5;
-        overflow: hidden;
-      }
-      .bar-fill {
-        height: 100%;
-        border-radius: 999px;
-        background: #10b981;
-      }
-
-      .skill-name {
-        font-size: 13.5px;
-        font-weight: 600;
-        color: #1f2937;
-      }
-      .skill-years {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
-        color: #6b7280;
-      }
-
-      /* ════════════════════════════════════════
-         CORREÇÕES PARA O PDF (O SEGREDO ESTÁ AQUI)
-      ════════════════════════════════════════ */
       @media print {
         .no-print {
           display: none !important;
         }
 
-        html,
-        body {
-          background: white !important;
-          width: 210mm;
-          margin: 0;
+        .page {
+          max-width: 100%;
           padding: 0;
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
         }
 
         @page {
           size: A4;
-          margin: 0;
-        }
-
-        .cv-card {
-          box-shadow: none !important;
-          border-radius: 0 !important;
-          max-width: 100% !important;
-          margin: 0 !important;
-          width: 100% !important;
-        }
-
-        /* Mudamos de display: table para flex para evitar o "espaço em branco" */
-        .main-container {
-          display: flex !important;
-          width: 100% !important;
-        }
-
-        /* IMPORTANTE: Permitir que seções quebrem entre as páginas */
-        section,
-        .tl-item {
-          page-break-inside: auto !important;
-          break-inside: auto !important;
-        }
-
-        header {
-          background: #0f172a !important;
-        }
-        .sidebar-bg {
-          background: #f8fafc !important;
-        }
-        .badge {
-          background: #f0fdf4 !important;
-          border-color: #6ee7b7 !important;
-        }
-        .pill-active {
-          background: #f0fdf4 !important;
-          border-color: #6ee7b7 !important;
-        }
-        .bar {
-          background: #d1fae5 !important;
-        }
-        .bar-fill {
-          background: #10b981 !important;
-        }
-        .tl-dot {
-          background: #10b981 !important;
-          box-shadow: 0 0 0 2px #10b981 !important;
-        }
-        .tl-line {
-          background: #10b981 !important;
-        }
-        .lang-card {
-          background: #f8fafc !important;
-        }
-        .form-card {
-          background: white !important;
-        }
-
-        *,
-        *::before,
-        *::after {
-          animation: none !important;
-          transition: none !important;
-        }
-        .hdr-glow,
-        .hdr-grid {
-          display: none !important;
-        }
-        a {
-          color: inherit !important;
-          text-decoration: none !important;
-        }
-        .hdr-text-white {
-          color: white !important;
-        }
-        .hdr-text-green {
-          color: #34d399 !important;
-        }
-        .hdr-text-muted {
-          color: #94a3b8 !important;
-        }
-        .pulse-static {
-          display: inline-block;
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: #10b981;
-          vertical-align: middle;
+          margin: 14mm;
         }
       }
     </style>
   </head>
-  <body style="background: #e5e7eb; min-height: 100vh; padding: 40px 16px">
-    <div class="ats-hidden" aria-hidden="true">
-      Desenvolvedor Web Full-Stack com foco em PHP e seu ecossistema (Laravel,
-      Inertia.js), JavaScript e TypeScript (Node.js, React.js, Next.js, Vue.js),
-      Python (Flask e FastAPI) e Java (Spring Boot) no desenvolvimento de APIs
-      RESTful e aplicações web. Experiência com arquitetura em camadas, MVC,
-      Eloquent ORM, integração com bancos de dados relacionais e segurança com
-      Spring Security. No front-end, Inertia.js, React.js, Next.js e Vue.js
-      para interfaces modernas, dinâmicas e responsivas. Tenho experiência no
-      desenvolvimento de aplicações completas, desde APIs robustas até
-      interfaces performáticas, sempre priorizando código limpo, boas práticas
-      e uma arquitetura bem definida.
-    </div>
-
-    <div
-      class="no-print"
-      style="position: fixed; bottom: 28px; right: 28px; z-index: 999"
-    >
-      <button
-        onclick="printCV()"
-        style="
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          background: #10b981;
-          color: white;
-          font-family: &quot;DM Sans&quot;, sans-serif;
-          font-size: 14px;
-          font-weight: 600;
-          padding: 14px 24px;
-          border: none;
-          border-radius: 999px;
-          cursor: pointer;
-          box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
-          transition: background 0.2s;
-        "
-      >
-        <svg
-          style="width: 16px; height: 16px"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          stroke-width="2.5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-          />
-        </svg>
+  <body>
+    <div class="no-print">
+      <button class="print-btn" type="button" onclick="printCV()">
         Baixar PDF
       </button>
     </div>
 
-    <div
-      class="cv-card"
-      style="
-        max-width: 880px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-      "
-    >
-      <header
-        style="
-          background: #0f172a;
-          padding: 40px 44px 36px;
-          position: relative;
-          overflow: hidden;
-        "
-      >
-        <div
-          class="hdr-grid"
-          style="
-            position: absolute;
-            inset: 0;
-            opacity: 0.045;
-            background-image: radial-gradient(
-              circle,
-              #10b981 1px,
-              transparent 1px
-            );
-            background-size: 22px 22px;
-            pointer-events: none;
-          "
-        ></div>
-        <div
-          class="hdr-glow"
-          style="
-            position: absolute;
-            top: -80px;
-            right: -80px;
-            width: 360px;
-            height: 360px;
-            background: #10b981;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.07;
-            pointer-events: none;
-          "
-        ></div>
-        <div
-          class="hdr-glow"
-          style="
-            position: absolute;
-            bottom: -60px;
-            left: -60px;
-            width: 260px;
-            height: 260px;
-            background: #059669;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.05;
-            pointer-events: none;
-          "
-        ></div>
-
-        <div style="position: relative">
-          <p
-            class="mono hdr-text-green"
-            style="
-              font-size: 12.5px;
-              color: #10b981;
-              opacity: 0.55;
-              margin-bottom: 12px;
-            "
-          >
-            ~/lucas-cavalheri&nbsp;$&nbsp;whoami
-          </p>
-          <div
-            style="
-              display: flex;
-              align-items: flex-start;
-              justify-content: space-between;
-              flex-wrap: wrap;
-              gap: 12px;
-            "
-          >
-            <div>
-              <h1
-                class="hdr-text-white"
-                style="
-                  font-size: 42px;
-                  font-weight: 700;
-                  color: white;
-                  line-height: 1;
-                  letter-spacing: -1px;
-                "
-              >
-                Lucas Cavalheri
-              </h1>
-              <p
-                class="hdr-text-green"
-                style="
-                  font-size: 18px;
-                  font-weight: 500;
-                  color: #34d399;
-                  margin-top: 10px;
-                "
-              >
-                Desenvolvedor Web Full-Stack
-              </p>
-            </div>
-            <div
-              class="pill-active hdr-avail"
-              style="
-                margin-top: 6px;
-                background: rgba(52, 211, 153, 0.12);
-                border-color: rgba(52, 211, 153, 0.3);
-                color: #34d399;
-              "
-            >
-              <span
-                class="pulse hdr-text-green"
-                style="background: #34d399"
-              ></span>
-              <span
-                class="pulse-static no-print"
-                style="display: none; background: #34d399"
-              ></span>
-              Disponível para projetos
-            </div>
-          </div>
-          <div
-            style="
-              height: 1px;
-              background: rgba(255, 255, 255, 0.09);
-              margin: 22px 0 18px;
-            "
-          ></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px 22px">
-            <a
-              href="mailto:lucas.dev.carvalho@gmail.com"
-              class="hdr-text-muted"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                color: #94a3b8;
-                text-decoration: none;
-                font-size: 13px;
-              "
-            >
-              <svg
-                style="width: 14px; height: 14px"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              lucas.dev.carvalho@gmail.com
-            </a>
-            <a
-              href="tel:+5519999031230"
-              class="hdr-text-muted"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                color: #94a3b8;
-                text-decoration: none;
-                font-size: 13px;
-              "
-            >
-              <svg
-                style="width: 14px; height: 14px"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              (19) 9 9903-1230
-            </a>
-            <span
-              class="hdr-text-muted"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                color: #94a3b8;
-                font-size: 13px;
-              "
-            >
-              <svg
-                style="width: 14px; height: 14px"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Mogi-Guaçu, SP · Home Office
-            </span>
-            <a
-              href="https://lucascavalheri.com.br"
-              target="_blank"
-              class="hdr-text-muted"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                color: #94a3b8;
-                text-decoration: none;
-                font-size: 13px;
-              "
-            >
-              <svg
-                style="width: 14px; height: 14px"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-              lucascavalheri.com.br
-            </a>
-            <a
-              href="https://github.com/LucasCavalheri"
-              target="_blank"
-              class="hdr-text-muted"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                color: #94a3b8;
-                text-decoration: none;
-                font-size: 13px;
-              "
-            >
-              <svg
-                style="width: 14px; height: 14px"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                />
-              </svg>
-              /LucasCavalheri
-            </a>
-          </div>
-        </div>
+    <main class="page">
+      <header>
+        <h1>Lucas Cavalheri</h1>
+        <p class="subtitle">Desenvolvedor Web Full-Stack</p>
+        <p class="contact">
+          <strong>Email:</strong>
+          <a href="mailto:lucas.dev.carvalho@gmail.com">lucas.dev.carvalho@gmail.com</a>
+          | <strong>Telefone:</strong> <a href="tel:+5519999031230">(19) 9 9903-1230</a>
+        </p>
+        <p class="contact">
+          <strong>Local:</strong> Mogi-Guaçu, SP (Home Office)
+          | <strong>Site:</strong>
+          <a href="https://lucascavalheri.com.br" target="_blank" rel="noopener noreferrer">lucascavalheri.com.br</a>
+          | <strong>GitHub:</strong>
+          <a href="https://github.com/LucasCavalheri" target="_blank" rel="noopener noreferrer">github.com/LucasCavalheri</a>
+        </p>
       </header>
 
-      <div class="main-container" style="display: table; width: 100%">
-        <main
-          style="
-            display: table-cell;
-            width: 68%;
-            vertical-align: top;
-            padding: 36px 40px;
-            border-right: 1.5px solid #f1f5f9;
-          "
-        >
-          <section style="margin-bottom: 34px">
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 14px;
-              "
-            >
-              <span class="sec-label">Perfil Profissional</span>
-              <div
-                style="
-                  flex: 1;
-                  height: 1.5px;
-                  background: #d1fae5;
-                  border-radius: 999px;
-                "
-              ></div>
-            </div>
-            <p style="font-size: 15px; line-height: 1.8; color: #374151">
-              <strong style="color: #111827; font-weight: 700"
-                >Desenvolvedor Web Full-Stack</strong
-              >
-              com foco em
-              <strong style="color: #111827; font-weight: 700"
-                >PHP e seu ecossistema</strong
-              >
-              — em especial
-              <strong style="color: #111827; font-weight: 700">Laravel</strong>
-              e
-              <strong style="color: #111827; font-weight: 700"
-                >Inertia.js</strong
-              >
-              — no desenvolvimento de
-              <strong style="color: #111827; font-weight: 700"
-                >aplicações web e APIs</strong
-              >, com integração a
-              <strong style="color: #111827; font-weight: 700"
-                >bancos de dados relacionais</strong
-              >
-              e atenção a
-              <strong style="color: #111827; font-weight: 700"
-                >arquitetura em camadas</strong
-              >
-              e boas práticas.
-              <br />
-              <br />
-              Também atuo de forma consistente com
-              <strong style="color: #111827; font-weight: 700"
-                >JavaScript/TypeScript</strong
-              >
-              e
-              <strong style="color: #111827; font-weight: 700">Node.js</strong>;
-              com
-              <strong style="color: #111827; font-weight: 700">Python</strong>
-              em
-              <strong style="color: #111827; font-weight: 700"
-                >Flask e FastAPI</strong
-              >;
-              no
-              <strong style="color: #111827; font-weight: 700">front-end</strong
-              >, com
-              <strong style="color: #111827; font-weight: 700"
-                >React.js, Next.js e Vue.js</strong
-              >, criando interfaces
-              <strong style="color: #111827; font-weight: 700"
-                >modernas, dinâmicas e responsivas</strong
-              >.
-              <strong style="color: #111827; font-weight: 700">Java</strong>
-              com
-              <strong style="color: #111827; font-weight: 700"
-                >Spring Boot</strong
-              >
-              e
-              <strong style="color: #111827; font-weight: 700"
-                >Spring Security</strong
-              >
-              complementam o ecossistema quando o projeto exige APIs e segurança
-              nessa linha.
-              <br />
-              <br />
-              Tenho experiência no desenvolvimento de aplicações
-              <strong style="color: #111827; font-weight: 700">completas</strong
-              >, desde
-              <strong style="color: #111827; font-weight: 700"
-                >APIs robustas</strong
-              >
-              até interfaces
-              <strong style="color: #111827; font-weight: 700"
-                >performáticas</strong
-              >, sempre priorizando
-              <strong style="color: #111827; font-weight: 700"
-                >código limpo</strong
-              >,
-              <strong style="color: #111827; font-weight: 700"
-                >boas práticas</strong
-              >
-              e uma
-              <strong style="color: #111827; font-weight: 700"
-                >arquitetura bem definida</strong
-              >.
-            </p>
-          </section>
+      <section>
+        <h2>Resumo Profissional</h2>
+        <p>
+          Desenvolvedor Web Full-Stack com foco em <strong>PHP e Laravel</strong>,
+          com atuação em desenvolvimento de <strong>aplicações web e APIs</strong>,
+          integração com bancos de dados relacionais e arquitetura em camadas.
+          Também atua com <strong>JavaScript/TypeScript e Node.js</strong>,
+          <strong>Python (Flask e FastAPI)</strong>,
+          <strong>React.js, Next.js e Vue.js</strong>, além de
+          <strong>Java com Spring Boot e Spring Security</strong> quando o projeto exige.
+          Experiência em ciclo completo de desenvolvimento, priorizando código limpo,
+          boas práticas e estrutura consistente.
+        </p>
+      </section>
 
-          <section style="margin-bottom: 34px">
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 22px;
-              "
-            >
-              <span class="sec-label">Experiência Profissional</span>
-              <div
-                style="
-                  flex: 1;
-                  height: 1.5px;
-                  background: #d1fae5;
-                  border-radius: 999px;
-                "
-              ></div>
-            </div>
-            <div class="tl-wrap">
-              <div class="tl-line"></div>
+      <section>
+        <h2>Experiência Profissional</h2>
 
-              <div class="tl-item" data-exp-start="2022-01" data-exp-current="true">
-                <div class="tl-dot live"></div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    gap: 8px;
-                  "
-                >
-                  <div>
-                    <h3
-                      style="font-size: 16px; font-weight: 700; color: #111827"
-                    >
-                      Desenvolvedor Web Full-Stack
-                    </h3>
-                    <p
-                      style="
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #059669;
-                        margin-top: 3px;
-                      "
-                    >
-                      Freelancer
-                    </p>
-                  </div>
-                  <div style="text-align: right; flex-shrink: 0">
-                    <p
-                      class="mono exp-period"
-                      style="font-size: 12px; color: #6b7280"
-                    >
-                      jan 2022 — atual
-                    </p>
-                    <div class="pill-active exp-duration-active" style="margin-top: 5px">
-                      <span class="pulse"></span>em andamento · 4a 4m
-                    </div>
-                  </div>
-                </div>
-                <p
-                  style="
-                    font-size: 14px;
-                    line-height: 1.75;
-                    color: #4b5563;
-                    margin-top: 10px;
-                  "
-                >
-                  Projetos sob demanda com foco em
-                  <strong style="color: #1f2937; font-weight: 600"
-                    >PHP, Laravel, Inertia.js, JavaScript/TypeScript, Node.js,
-                    Python, Flask, FastAPI, React.js, Next.js, Java, Spring
-                    Boot</strong
-                  >.
-                </p>
-                <div
-                  style="
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 7px;
-                    margin-top: 12px;
-                  "
-                >
-                  <span class="badge">PHP</span
-                  ><span class="badge">Laravel</span
-                  ><span class="badge">Inertia.js</span
-                  ><span class="badge">JavaScript</span
-                  ><span class="badge">TypeScript</span
-                  ><span class="badge">Node.js</span
-                  ><span class="badge">Python</span
-                  ><span class="badge">Flask</span
-                  ><span class="badge">FastAPI</span
-                  ><span class="badge">React.js</span
-                  ><span class="badge">Next.js</span
-                  ><span class="badge">Java</span
-                  ><span class="badge">Spring Boot</span
-                </div>
-              </div>
+        <article class="job">
+          <p class="job-header"><strong>Desenvolvedor Web Full-Stack - Freelancer</strong></p>
+          <p class="job-period"><em>jan/2022 - atual</em></p>
+          <p>
+            Projetos sob demanda com foco em PHP, Laravel, Inertia.js, JavaScript,
+            TypeScript, Node.js, Python, Flask, FastAPI, React.js, Next.js,
+            Java e Spring Boot.
+          </p>
+        </article>
 
-              <div
-                class="tl-item"
-                style="margin-top: 25px"
-                data-exp-start="2024-06"
-                data-exp-current="true"
-              >
-                <div class="tl-dot live"></div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    gap: 8px;
-                  "
-                >
-                  <div>
-                    <h3
-                      style="font-size: 16px; font-weight: 700; color: #111827"
-                    >
-                      Desenvolvedor Web Full-Stack
-                    </h3>
-                    <p
-                      style="
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #059669;
-                        margin-top: 3px;
-                      "
-                    >
-                      Tropical Hub
-                    </p>
-                  </div>
-                  <div style="text-align: right; flex-shrink: 0">
-                    <p
-                      class="mono exp-period"
-                      style="font-size: 12px; color: #6b7280"
-                    >
-                      jun 2024 — atual
-                    </p>
-                    <div class="pill-active exp-duration-active" style="margin-top: 5px">
-                      <span class="pulse"></span>em andamento · 1a 11m
-                    </div>
-                  </div>
-                </div>
-                <p
-                  style="
-                    font-size: 14px;
-                    line-height: 1.75;
-                    color: #4b5563;
-                    margin-top: 10px;
-                  "
-                >
-                  Desenvolvimento de soluções web e integrações com HubSpot.
-                  Construção de aplicações com
-                  <strong style="color: #1f2937; font-weight: 600"
-                    >JavaScript, TypeScript, Node.js, Nest.js, React.js,
-                    Next.js</strong
-                  >.
-                </p>
-                <div
-                  style="
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 7px;
-                    margin-top: 12px;
-                  "
-                >
-                  <span class="badge">JavaScript</span
-                  ><span class="badge">TypeScript</span
-                  ><span class="badge">Node.js</span
-                  ><span class="badge">Nest.js</span
-                  ><span class="badge">React.js</span
-                  ><span class="badge">Next.js</span
-                </div>
-              </div>
+        <article class="job">
+          <p class="job-header"><strong>Desenvolvedor Web Full-Stack - Tropical Hub</strong></p>
+          <p class="job-period"><em>jun/2024 - atual</em></p>
+          <p>
+            Desenvolvimento de soluções web e integrações com HubSpot.
+            Construção de aplicações com JavaScript, TypeScript, Node.js,
+            Nest.js, React.js e Next.js.
+          </p>
+        </article>
 
-              <div
-                class="tl-item"
-                style="margin-top: 25px"
-                data-exp-start="2023-11"
-                data-exp-end="2024-06"
-              >
-                <div class="tl-dot"></div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    gap: 8px;
-                  "
-                >
-                  <div>
-                    <h3
-                      style="font-size: 16px; font-weight: 700; color: #111827"
-                    >
-                      Desenvolvedor Web Full-Stack
-                    </h3>
-                    <p
-                      style="
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #059669;
-                        margin-top: px;
-                      "
-                    >
-                      Grupo NSC
-                    </p>
-                  </div>
-                  <div style="text-align: right; flex-shrink: 0">
-                    <p
-                      class="mono exp-period"
-                      style="font-size: 12px; color: #6b7280"
-                    >
-                      nov 2023 — jun 2024
-                    </p>
-                    <p
-                      class="mono exp-duration"
-                      style="font-size: 11.5px; color: #9ca3af; margin-top: 3px"
-                    >
-                      7 meses
-                    </p>
-                  </div>
-                </div>
-                <p
-                  style="
-                    font-size: 14px;
-                    line-height: 1.75;
-                    color: #4b5563;
-                    margin-top: 10px;
-                  "
-                >
-                  Atuação full-stack em aplicações web e mobile. Desenvolvimento
-                  com
-                  <strong style="color: #1f2937; font-weight: 600"
-                    >JavaScript, TypeScript, Node.js, Vue.js, Nuxt.js, React.js e Next.js</strong
-                  >.
-                </p>
-                <div
-                  style="
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 7px;
-                    margin-top: 12px;
-                  "
-                >
-                  <span class="badge">JavaScript</span
-                  ><span class="badge">TypeScript</span
-                  ><span class="badge">Node.js</span
-                  ><span class="badge">Vue.js</span
-                  ><span class="badge">Nuxt.js</span
-                  ><span class="badge">React.js</span
-                  ><span class="badge">Next.js</span>
-                </div>
-              </div>
-            </div>
-          </section>
+        <article class="job">
+          <p class="job-header"><strong>Desenvolvedor Web Full-Stack - Grupo NSC</strong></p>
+          <p class="job-period"><em>nov/2023 - jun/2024</em></p>
+          <p>
+            Atuação full-stack em aplicações web e mobile com JavaScript,
+            TypeScript, Node.js, Vue.js, Nuxt.js, React.js e Next.js.
+          </p>
+        </article>
+      </section>
 
-          <section>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 14px;
-              "
-            >
-              <span class="sec-label">Idiomas</span>
-              <div
-                style="
-                  flex: 1;
-                  height: 1.5px;
-                  background: #d1fae5;
-                  border-radius: 999px;
-                "
-              ></div>
-            </div>
-            <div style="display: flex; gap: 14px">
-              <div
-                class="lang-card"
-                style="
-                  flex: 1;
-                  background: #f8fafc;
-                  border: 1.5px solid #e2e8f0;
-                  border-radius: 14px;
-                  padding: 16px 18px;
-                "
-              >
-                <p style="font-size: 15px; font-weight: 700; color: #111827">
-                  Português
-                </p>
-                <p style="font-size: 13px; color: #6b7280; margin-top: 3px">
-                  Nativo
-                </p>
-                <div class="bar" style="margin-top: 12px">
-                  <div class="bar-fill" style="width: 100%"></div>
-                </div>
-              </div>
-              <div
-                class="lang-card"
-                style="
-                  flex: 1;
-                  background: #f8fafc;
-                  border: 1.5px solid #e2e8f0;
-                  border-radius: 14px;
-                  padding: 16px 18px;
-                "
-              >
-                <p style="font-size: 15px; font-weight: 700; color: #111827">
-                  Inglês
-                </p>
-                <p style="font-size: 13px; color: #6b7280; margin-top: 3px">
-                  Intermediário
-                </p>
-                <div class="bar" style="margin-top: 12px">
-                  <div class="bar-fill" style="width: 60%"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
+      <section>
+        <h2>Competências Técnicas</h2>
+        <p><strong>Linguagens:</strong> PHP, JavaScript, TypeScript, Python, Java.</p>
+        <p><strong>Back-end:</strong> Laravel, Node.js, Nest.js, Flask, FastAPI, Spring Boot.</p>
+        <p><strong>Front-end:</strong> React.js, Next.js, Vue.js, Nuxt.js, Inertia.js.</p>
+      </section>
 
-        <aside
-          class="sidebar-bg"
-          style="
-            display: table-cell;
-            width: 32%;
-            vertical-align: top;
-            padding: 36px 24px;
-            background: #f8fafc;
-            border-left: 1.5px solid #f1f5f9;
-          "
-        >
-          <section style="margin-bottom: 30px">
-            <div style="margin-bottom: 18px">
-              <span class="sec-label">Competências</span>
-            </div>
-            <p
-              class="mono"
-              style="
-                font-size: 9.5px;
-                font-weight: 600;
-                color: #94a3b8;
-                margin-bottom: 12px;
-              "
-            >
-              LINGUAGENS
-            </p>
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-bottom: 20px;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">PHP</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 98%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">JavaScript/TypeScript</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 96%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Python</span
-                  ><span class="skill-years">6 meses</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 62%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Java</span
-                  ><span class="skill-years">6 meses</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 62%"></div>
-                </div>
-              </div>
-            </div>
-            <p
-              class="mono"
-              style="
-                font-size: 9.5px;
-                font-weight: 600;
-                color: #94a3b8;
-                margin-bottom: 12px;
-              "
-            >
-              BACKEND
-            </p>
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-bottom: 20px;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Laravel</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 98%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Node.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 96%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Nest.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 94%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Flask</span
-                  ><span class="skill-years">6 meses</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 62%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">FastAPI</span
-                  ><span class="skill-years">6 meses</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 62%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Spring Boot</span
-                  ><span class="skill-years">6 meses</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 62%"></div>
-                </div>
-              </div>
-            </div>
-            <p
-              class="mono"
-              style="
-                font-size: 9.5px;
-                font-weight: 600;
-                color: #94a3b8;
-                margin-bottom: 12px;
-              "
-            >
-              FRONTEND
-            </p>
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-bottom: 20px;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">React.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 96%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Next.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 96%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Vue.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 96%"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                  "
-                >
-                  <span class="skill-name">Inertia.js</span
-                  ><span class="skill-years">4 anos</span>
-                </div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 97%"></div>
-                </div>
-              </div>
-            </div>
-          </section>
+      <section>
+        <h2>Idiomas</h2>
+        <ul>
+          <li><strong>Português:</strong> nativo.</li>
+          <li><strong>Inglês:</strong> intermediário.</li>
+        </ul>
+      </section>
 
-          <section style="margin-bottom: 30px">
-            <div style="margin-bottom: 14px">
-              <span class="sec-label">Diferenciais</span>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 10px">
-              <div style="display: flex; align-items: flex-start; gap: 9px">
-                <span class="mono" style="color: #10b981; font-size: 12px"
-                  >▸</span
-                >
-                <p style="font-size: 13.5px; color: #374151">
-                  Código limpo e arquitetura consistente
-                </p>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 9px">
-                <span class="mono" style="color: #10b981; font-size: 12px"
-                  >▸</span
-                >
-                <p style="font-size: 13.5px; color: #374151">
-                  Ciclo completo: requisitos → deploy
-                </p>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 9px">
-                <span class="mono" style="color: #10b981; font-size: 12px"
-                  >▸</span
-                >
-                <p style="font-size: 13.5px; color: #374151">
-                  APIs robustas e bem estruturadas
-                </p>
-              </div>
-            </div>
-          </section>
-        </aside>
-      </div>
-    </div>
+      <section>
+        <h2>Diferenciais</h2>
+        <ul>
+          <li>Código limpo e arquitetura consistente.</li>
+          <li>Atuação no ciclo completo: requisitos até deploy.</li>
+          <li>Construção de APIs robustas e bem estruturadas.</li>
+        </ul>
+      </section>
+    </main>
 
     <script>
-      function formatMonthYear(date) {
-        const months = [
-          "jan",
-          "fev",
-          "mar",
-          "abr",
-          "mai",
-          "jun",
-          "jul",
-          "ago",
-          "set",
-          "out",
-          "nov",
-          "dez",
-        ];
-        return months[date.getMonth()] + " " + date.getFullYear();
-      }
-
-      function parseYearMonth(value) {
-        const parts = value.split("-");
-        const year = Number(parts[0]);
-        const month = Number(parts[1]);
-        return new Date(year, month - 1, 1);
-      }
-
-      function diffInMonths(startDate, endDate) {
-        return (
-          (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-          (endDate.getMonth() - startDate.getMonth())
-        );
-      }
-
-      function formatDuration(totalMonths) {
-        if (totalMonths < 1) return "menos de 1 mês";
-        const years = Math.floor(totalMonths / 12);
-        const months = totalMonths % 12;
-
-        if (years > 0 && months > 0) return years + "a " + months + "m";
-        if (years > 0) return years + " ano" + (years > 1 ? "s" : "");
-        return months + " mes" + (months > 1 ? "es" : "");
-      }
-
-      function updateExperienceDurations() {
-        const items = document.querySelectorAll(".tl-item[data-exp-start]");
-        const now = new Date();
-
-        items.forEach((item) => {
-          const startRaw = item.getAttribute("data-exp-start");
-          const endRaw = item.getAttribute("data-exp-end");
-          const isCurrent = item.getAttribute("data-exp-current") === "true";
-
-          if (!startRaw) return;
-
-          const startDate = parseYearMonth(startRaw);
-          const endDate = isCurrent || !endRaw ? now : parseYearMonth(endRaw);
-          const totalMonths = Math.max(0, diffInMonths(startDate, endDate));
-
-          const periodEl = item.querySelector(".exp-period");
-          if (periodEl) {
-            const endLabel = isCurrent || !endRaw ? "atual" : formatMonthYear(endDate);
-            periodEl.textContent = formatMonthYear(startDate) + " — " + endLabel;
-          }
-
-          const activeDurationEl = item.querySelector(".exp-duration-active");
-          if (activeDurationEl) {
-            const pulse = activeDurationEl.querySelector(".pulse");
-            activeDurationEl.textContent = "em andamento · " + formatDuration(totalMonths);
-            if (pulse) activeDurationEl.prepend(pulse);
-          }
-
-          const durationEl = item.querySelector(".exp-duration");
-          if (durationEl) durationEl.textContent = formatDuration(totalMonths);
-        });
-      }
-
-      updateExperienceDurations();
-
       function printCV() {
         const btn = document.querySelector(".no-print");
-
-        // Guarda título original
         const originalTitle = document.title;
 
-        // Define nome desejado do PDF
         document.title = "Curriculo-LucasCavalheri";
 
         if (btn) btn.style.display = "none";
-
         window.print();
 
         setTimeout(() => {
-          // Restaura título original
           document.title = originalTitle;
-
           if (btn) btn.style.display = "block";
         }, 800);
       }
